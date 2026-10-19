@@ -1,7 +1,4 @@
-[readme_md.md](https://github.com/user-attachments/files/33683339/readme_md.md)
 # Heavenly Hosts — Hosting & Decor Atelier
-
-Welcome to the beginner's guide for your website! This project is a luxurious, single-page web experience built for **Heavenly Hosts — Hosting & Decor Atelier**, specializing in high-end outdoor picnic setups, bespoke event decor, and botanical celebrations in South Africa.
 
 ## 🌸 Project Overview
 
