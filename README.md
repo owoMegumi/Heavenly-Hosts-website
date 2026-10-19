@@ -29,15 +29,3 @@ This is a complete, self-contained website contained within a single file named 
 * **Service Focus:** Refined core regions to Greater Johannesburg, Pretoria & Centurion, Cradle of Humankind, and Destination Events.
 
 * **Smart Pricing:** Guest slider caps at 20 guests, with pricing increasing after every even step (`Math.floor((guests - base) / 2) * evenStepRate`).
-
-## 🚀 How to Run It in Your Browser (For Beginners)
-
-Since this website is built entirely in a single file (`Heavnly hosts web.html`), running it is very simple:
-
-1. **Save the Code:** Copy the full code provided and paste it into a text editor (like Visual Studio Code, Notepad, or TextEdit). Save the file as `Heavnly hosts web.html`.
-
-2. **Open in Browser:**
-   * Locate your saved `Heavnly hosts web.html` file on your computer.
-   * Double-click the file, or right-click it and choose **"Open with"** followed by your favorite web browser (such as Google Chrome, Safari, Microsoft Edge, or Firefox).
-
-3. **Explore:** The page will open locally in your browser with all animations, styling, and interactive features fully active!
