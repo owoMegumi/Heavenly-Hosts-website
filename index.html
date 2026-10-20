@@ -1,7 +1,6 @@
 
 <!--Model 9:11 AM
 ### Complete Code (`index.html`)-->
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -222,7 +221,7 @@
     .header-brand-logo {
       height: 48px;
       width: auto;
-      max-width: 180px;
+      max-width: 200px;
       object-fit: contain;
       display: block;
       mix-blend-mode: multiply;
@@ -1485,7 +1484,7 @@
 
     @media (max-width: 768px) {
       .site-header { padding: 12px 18px; }
-      .header-brand-logo { height: 40px; max-width: 140px; }
+      .header-brand-logo { height: 60px; max-width: 200px; }
       .hero-section { padding-top: 110px; }
       .floral-cluster { display: none; } /* Remove floral side clash on phones */
       .hero-content { padding: 0 10px; }
@@ -1539,8 +1538,8 @@
     <a href="#" class="header-logo-group">
       <!-- Logo image: drops logo.png or uses inline fallback -->
       <img 
-        src="logo.png" 
-        onerror="this.onerror=null; this.src='https://i.ibb.co/3s4zVjH/heavenly-logo.png';" 
+        src="Hea_Ho_logo.png" 
+        onerror="this.onerror=null; this.src='Hea_Ho_logo.png';" 
         alt="Heavenly Hosts — Hosting &amp; Decor" 
         class="header-brand-logo"
       >
@@ -2224,7 +2223,7 @@
               <p class="wa-desc">Connect directly with us via WhatsApp for dates &amp; bespoke inquiries.</p>
             </div>
           </div>
-          <a href="https://wa.me/27820000000?text=Hello%20Heavenly%20Hosts!%20I%20would%20love%20to%20inquire%20about%20booking%20a%20luxury%20picnic%20experience." 
+          <a href="https://wa.me/27846224652?text=Hello%20Heavenly%20Hosts!%20I%20would%20love%20to%20inquire%20about%20booking%20a%20luxury%20picnic%20experience." 
              target="_blank" rel="noopener noreferrer" 
              class="btn-pill" style="border-color: #25D366; color: #1E7E34; font-size: 0.68rem; padding: 10px 22px;">
             <span>Chat On WhatsApp</span>
@@ -2695,7 +2694,7 @@
       document.getElementById('successModalSummary').innerHTML = `Thank you, <strong>${name}</strong>! We have received your booking inquiry for <strong>${tier}</strong> on <strong>${date}</strong> (${guests} guests at ${loc}). Reference: <strong>${ref}</strong>.`;
       
       const waMessage = encodeURIComponent(`Hello Heavenly Hosts! I would like to inquire about booking (${ref}):\n• Name: ${name}\n• Date: ${date}\n• Location: ${loc}\n• Guests: ${guests}\n• Tier: ${tier}`);
-      document.getElementById('successWhatsAppLink').href = `https://wa.me/27820000000?text=${waMessage}`;
+      document.getElementById('successWhatsAppLink').href = `https://wa.me/0846224652?text=${waMessage}`;
       document.getElementById('successModalOverlay').classList.add('active');
     }
     function closeSuccessModal() { document.getElementById('successModalOverlay').classList.remove('active'); }
@@ -2714,3 +2713,4 @@
 </body>
 </html>
 ```
+
