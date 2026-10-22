@@ -1,7 +1,7 @@
 
 <!--Model 9:11 AM
 ### Complete Code (`index.html`)-->
-```html
+<!--```html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,12 +62,10 @@
       width: 100%;
     }
 
-    /* Paragraph Subtle Shadow */
     p, .stop-body, .section-dek, .hero-description, .drawer-description {
       text-shadow: 0 1px 2px rgba(45, 41, 38, 0.08);
     }
 
-    /* Smooth Organic Section Transitions */
     .section-transition-mask {
       position: relative;
     }
@@ -94,14 +92,12 @@
       z-index: 5;
     }
 
-    /* Custom Selection & Scrollbar */
     ::selection { background: var(--sand-beige); color: var(--taupe-text); }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg-cream); }
     ::-webkit-scrollbar-thumb { background: var(--sand-beige); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--pale-gold); }
 
-    /* Typography */
     h1, h2, h3, h4 {
       font-family: var(--font-serif);
       font-weight: 400;
@@ -109,7 +105,6 @@
       line-height: 1.18;
     }
 
-    /* Pill Buttons */
     .btn-pill {
       display: inline-flex;
       align-items: center;
@@ -187,9 +182,7 @@
       .custom-cursor, .custom-cursor-dot { display: block; }
     }
 
-    /* =============================================================
-       SEAMLESS RESPONSIVE HEADER
-    ============================================================= */
+    /* Header */
     .site-header {
       position: fixed;
       top: 0;
@@ -203,7 +196,6 @@
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       background: rgba(253, 251, 247, 0.88);
       backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
       border-bottom: 0.5px solid var(--line-subtle);
     }
     .site-header.scrolled {
@@ -211,7 +203,6 @@
       background: rgba(253, 251, 247, 0.98);
       box-shadow: 0 4px 25px rgba(45, 41, 38, 0.04);
     }
-    
     .header-logo-group {
       display: flex;
       align-items: center;
@@ -221,15 +212,13 @@
     .header-brand-logo {
       height: 48px;
       width: auto;
-      max-width: 200px;
+      max-width: 180px;
       object-fit: contain;
       display: block;
       mix-blend-mode: multiply;
       transition: transform 0.3s ease;
     }
-    .header-brand-logo:hover {
-      transform: scale(1.02);
-    }
+    .header-brand-logo:hover { transform: scale(1.02); }
 
     .nav-links {
       display: flex;
@@ -256,20 +245,13 @@
       width: 0;
       height: 0.5px;
       background: var(--pale-gold);
-      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: width 0.35s ease;
     }
     .nav-link:hover { color: var(--pale-gold-dark); }
     .nav-link:hover::after { width: 100%; }
 
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .currency-select-wrap {
-      position: relative;
-      font-size: 0.68rem;
-    }
+    .header-actions { display: flex; align-items: center; gap: 14px; }
+    .currency-select-wrap { position: relative; font-size: 0.68rem; }
     .currency-select {
       background: transparent;
       border: 0.5px solid var(--line-subtle);
@@ -281,7 +263,6 @@
       cursor: pointer;
       outline: none;
       appearance: none;
-      -webkit-appearance: none;
     }
     .currency-arrow {
       position: absolute;
@@ -293,7 +274,6 @@
       color: var(--taupe-muted);
     }
 
-    /* Mobile Hamburger Button */
     .mobile-menu-toggle {
       display: none;
       background: transparent;
@@ -313,10 +293,8 @@
       height: 1.5px;
       background: var(--taupe-text);
       border-radius: 1px;
-      transition: all 0.3s ease;
     }
 
-    /* Mobile Slide-out Menu */
     .mobile-nav-drawer {
       position: fixed;
       top: 0;
@@ -333,24 +311,13 @@
       transform: translateX(100%);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .mobile-nav-drawer.open {
-      transform: translateX(0);
-    }
-    .mobile-nav-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
+    .mobile-nav-drawer.open { transform: translateX(0); }
+    .mobile-nav-list { list-style: none; display: flex; flex-direction: column; gap: 22px; }
     .mobile-nav-link {
       font-family: var(--font-serif);
       font-size: 1.4rem;
       color: var(--taupe-text);
       text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .mobile-nav-link:hover {
-      color: var(--pale-gold-dark);
     }
     .mobile-nav-overlay {
       position: fixed;
@@ -362,14 +329,9 @@
       pointer-events: none;
       transition: opacity 0.3s ease;
     }
-    .mobile-nav-overlay.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
+    .mobile-nav-overlay.open { opacity: 1; pointer-events: auto; }
 
-    /* =============================================================
-       HERO FRAME (RESPONSIVE NO-OVERLAP)
-    ============================================================= */
+    /* Hero */
     .hero-section {
       min-height: 100vh;
       min-height: 100dvh;
@@ -382,22 +344,8 @@
       overflow: hidden;
       background: radial-gradient(circle at 50% 45%, #FFFFFF 0%, #FDFBF7 65%, #F8F3EC 100%);
     }
-
-    #petalCanvas {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    /* Botanical Floral Borders */
-    .hero-floral-frame {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      overflow: hidden;
-    }
+    #petalCanvas { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+    .hero-floral-frame { position: absolute; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
     .floral-cluster {
       position: absolute;
       width: clamp(260px, 32vw, 440px);
@@ -406,17 +354,8 @@
       background-repeat: no-repeat;
       opacity: 0.95;
     }
-    .floral-cluster-left {
-      top: 0;
-      left: 0;
-      background-position: left center;
-    }
-    .floral-cluster-right {
-      top: 0;
-      right: 0;
-      background-position: right center;
-      transform: scaleX(-1);
-    }
+    .floral-cluster-left { top: 0; left: 0; background-position: left center; }
+    .floral-cluster-right { top: 0; right: 0; background-position: right center; transform: scaleX(-1); }
 
     .hero-content {
       position: relative;
@@ -426,7 +365,6 @@
       margin: 0 auto;
       text-align: center;
     }
-
     .hero-headline {
       font-family: var(--font-serif);
       font-size: clamp(2.3rem, 5.2vw, 4.8rem);
@@ -441,7 +379,6 @@
       font-style: italic;
       color: var(--pale-gold-dark);
     }
-
     .hero-subtext {
       font-family: var(--font-script);
       font-size: clamp(1.8rem, 3.4vw, 2.8rem);
@@ -450,7 +387,6 @@
       margin-bottom: 22px;
       line-height: 1.2;
     }
-
     .hero-description {
       max-width: 580px;
       margin: 0 auto 30px auto;
@@ -458,7 +394,6 @@
       line-height: 1.8;
       color: var(--taupe-muted);
     }
-
     .hero-cta-group {
       display: flex;
       align-items: center;
@@ -485,7 +420,6 @@
       height: 26px;
       border: 0.5px solid var(--taupe-muted);
       border-radius: 9px;
-      position: relative;
       display: flex;
       justify-content: center;
       padding-top: 4px;
@@ -502,15 +436,12 @@
       100% { transform: translateY(9px); opacity: 0; }
     }
 
-    /* =============================================================
-       SECTION 2: THE GARDEN PATHWAY (RESPONSIVE TRACK)
-    ============================================================= */
+    /* Garden Walk */
     .garden-path-section {
       position: relative;
       background: var(--bg-cream-alt);
       padding: clamp(70px, 10vw, 110px) 20px clamp(90px, 12vw, 130px) 20px;
     }
-
     .path-progress-tracker {
       position: sticky;
       top: 80px;
@@ -545,30 +476,11 @@
       border: none;
       padding: 4px 6px;
       border-radius: 9999px;
-      transition: all 0.3s ease;
     }
-    .tracker-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--sand-beige);
-      flex-shrink: 0;
-    }
-    .tracker-step.active {
-      color: var(--taupe-text);
-      font-weight: 500;
-    }
-    .tracker-step.active .tracker-dot {
-      background: var(--pale-gold);
-      box-shadow: 0 0 8px var(--pale-gold);
-      transform: scale(1.2);
-    }
-    .tracker-line {
-      width: 16px;
-      height: 0.5px;
-      background: var(--line-subtle);
-      flex-shrink: 0;
-    }
+    .tracker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sand-beige); }
+    .tracker-step.active { color: var(--taupe-text); font-weight: 500; }
+    .tracker-step.active .tracker-dot { background: var(--pale-gold); transform: scale(1.2); }
+    .tracker-line { width: 16px; height: 0.5px; background: var(--line-subtle); }
 
     .garden-walk-flow-track {
       position: relative;
@@ -579,7 +491,6 @@
       gap: clamp(60px, 10vw, 120px);
       z-index: 10;
     }
-
     .winding-path-svg-bg {
       position: absolute;
       top: 0;
@@ -601,21 +512,13 @@
       fill: var(--pale-gold);
       stroke: #FFFFFF;
       stroke-width: 2;
-      filter: drop-shadow(0 2px 6px rgba(168, 134, 92, 0.4));
     }
 
-    .milestone-waypoint-row {
-      position: relative;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      width: 100%;
-    }
+    .milestone-waypoint-row { position: relative; z-index: 10; display: flex; align-items: center; width: 100%; }
     .milestone-waypoint-row.align-left { justify-content: flex-start; }
     .milestone-waypoint-row.align-right { justify-content: flex-end; }
     .milestone-waypoint-row.align-center { justify-content: center; }
 
-    /* Stop 1: Welcome */
     .welcome-card-content {
       max-width: 620px;
       width: 100%;
@@ -648,21 +551,10 @@
       align-items: center;
       gap: 8px;
     }
-    .stop-title {
-      font-family: var(--font-serif);
-      font-size: clamp(1.7rem, 3.2vw, 2.5rem);
-      margin-bottom: 16px;
-      color: var(--taupe-text);
-      line-height: 1.2;
-    }
-    .stop-body {
-      font-size: clamp(0.84rem, 1.5vw, 0.88rem);
-      line-height: 1.8;
-      color: var(--taupe-muted);
-      margin-bottom: 22px;
-    }
+    .stop-title { font-family: var(--font-serif); font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom: 16px; line-height: 1.2; }
+    .stop-body { font-size: clamp(0.84rem, 1.5vw, 0.88rem); line-height: 1.8; color: var(--taupe-muted); margin-bottom: 22px; }
 
-    /* Stop 2: Fine Art Prints */
+    /* Pinned Fine Art Prints */
     .gallery-prints-wrapper {
       max-width: 960px;
       width: 100%;
@@ -678,7 +570,9 @@
       box-shadow: 0 16px 40px rgba(45, 41, 38, 0.08);
       position: relative;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
+    .print-frame:hover { transform: translateY(-4px); }
     .brass-push-pin {
       position: absolute;
       top: -8px;
@@ -692,7 +586,7 @@
     }
     .print-image-container {
       width: 100%;
-      height: clamp(200px, 28vw, 250px);
+      height: clamp(210px, 30vw, 260px);
       overflow: hidden;
       background: var(--sand-light);
     }
@@ -700,11 +594,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: saturate(0.9) contrast(0.98);
+      filter: saturate(0.92) contrast(0.98);
+      transition: transform 0.4s ease;
     }
+    .print-frame:hover .print-image-container img { transform: scale(1.03); }
     .print-caption { margin-top: 12px; text-align: center; }
     .print-title { font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 4px; }
     .print-details { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--taupe-muted); }
+
     .gallery-text-col {
       background: rgba(253, 251, 247, 0.95);
       backdrop-filter: blur(16px);
@@ -714,7 +611,20 @@
       box-shadow: 0 18px 45px rgba(45, 41, 38, 0.05);
     }
 
-    /* Stop 3: 3D Frosted Glass Card */
+    /* Real Events Exhibition Section */
+    .real-gallery-section {
+      max-width: 1200px;
+      margin: 80px auto 0 auto;
+      padding: 0 20px;
+    }
+    .gallery-grid-mosaic {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 36px;
+    }
+
+    /* 3D Glass Card */
     .glass-showcase-wrapper {
       max-width: 1080px;
       width: 100%;
@@ -729,7 +639,7 @@
       width: 100%;
       height: 360px;
       transform-style: preserve-3d;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.6s ease;
     }
     .glass-layer {
       position: absolute;
@@ -742,20 +652,10 @@
       background: #FAF7F2;
       border: 0.5px solid rgba(197, 168, 128, 0.4);
       box-shadow: 0 15px 35px rgba(45, 41, 38, 0.08);
-      transform: translateZ(0px);
       padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-    }
-    .layer-base-pattern {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      opacity: 0.15;
-      font-family: var(--font-serif);
-      font-size: 5rem;
-      line-height: 1;
     }
     .glass-layer-florals {
       transform: translateZ(25px);
@@ -768,26 +668,12 @@
       transform: translateZ(50px);
       background: rgba(253, 251, 247, 0.6);
       backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
       border: 0.5px solid rgba(255, 255, 255, 0.85);
-      box-shadow: 0 20px 45px rgba(45, 41, 38, 0.09), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+      box-shadow: 0 20px 45px rgba(45, 41, 38, 0.09);
       padding: clamp(24px, 4vw, 36px);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .etched-glass-heading {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 3.2vw, 2.2rem);
-      letter-spacing: -0.01em;
-      color: rgba(45, 41, 38, 0.85);
-      line-height: 1.1;
-    }
-    .etched-glass-heading em {
-      font-family: var(--font-script);
-      font-size: clamp(2rem, 3.5vw, 2.4rem);
-      display: block;
-      color: var(--pale-gold-dark);
     }
     .glass-layer-interactive {
       transform: translateZ(75px);
@@ -809,30 +695,6 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-    }
-
-    .exploded-mode .glass-assembly-stage {
-      transform: rotateY(-20deg) rotateX(10deg) scale(0.92);
-    }
-    .exploded-mode .glass-layer-base { transform: translateZ(-30px); }
-    .exploded-mode .glass-layer-florals { transform: translateZ(40px); }
-    .exploded-mode .glass-layer-pane { transform: translateZ(110px); }
-    .exploded-mode .glass-layer-interactive { transform: translateZ(170px); }
-
-    .exploded-toggle-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding: 8px 18px;
-      background: rgba(253, 251, 247, 0.9);
-      border: 0.5px solid var(--line-gold);
-      border-radius: 9999px;
-      font-size: 0.65rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--taupe-text);
-      cursor: pointer;
     }
 
     .addons-list-card {
@@ -858,9 +720,7 @@
     .addon-desc { font-size: 0.68rem; color: var(--taupe-muted); }
     .addon-price { font-size: 0.8rem; font-weight: 500; color: var(--pale-gold-dark); white-space: nowrap; }
 
-    /* =============================================================
-       SECTION 3: THE DESTINATION PICNIC SPREAD
-    ============================================================= */
+    /* Destination Section */
     .picnic-destination-section {
       position: relative;
       background: var(--bg-cream);
@@ -891,6 +751,7 @@
     }
     .section-dek { font-size: clamp(0.84rem, 1.5vw, 0.9rem); line-height: 1.8; color: var(--taupe-muted); }
 
+    /* Interactive Setup Photo Frame with Authentic First Image */
     .picnic-interactive-canvas-frame {
       max-width: 1180px;
       margin: 0 auto clamp(50px, 8vw, 90px) auto;
@@ -904,52 +765,54 @@
     .picnic-image-hotspots-wrap {
       position: relative;
       width: 100%;
-      height: clamp(340px, 50vw, 640px);
+      height: clamp(380px, 60vw, 680px);
       overflow: hidden;
       background: var(--sand-light);
     }
     .picnic-image-hotspots-wrap img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 65%;
+      object-position: center 80%;
       filter: contrast(0.98) brightness(1.02);
     }
     .picnic-sunlight-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(255, 245, 230, 0.25) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(255, 245, 230, 0.2) 0%, transparent 60%);
       pointer-events: none;
     }
 
+    /* Hotspot Pins with 44px tap targets for mobile */
     .hotspot-pin {
       position: absolute;
-      width: 34px;
-      height: 34px;
+      width: 44px;
+      height: 44px;
       transform: translate(-50%, -50%);
       cursor: pointer;
       z-index: 25;
       background: none;
       border: none;
       outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .hotspot-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       background: var(--pale-gold);
       border-radius: 50%;
       border: 2px solid #FFFFFF;
-      box-shadow: 0 2px 8px rgba(45, 41, 38, 0.3);
+      box-shadow: 0 2px 8px rgba(45, 41, 38, 0.35);
+      transition: transform 0.25s ease;
     }
     .hotspot-pulse {
       position: absolute;
-      inset: 0;
+      inset: 4px;
       border-radius: 50%;
-      border: 1px solid var(--pale-gold);
+      border: 1.5px solid var(--pale-gold);
       opacity: 0.8;
       animation: hotspotPulse 2.4s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
     }
@@ -959,9 +822,9 @@
     }
     .hotspot-tooltip {
       position: absolute;
-      bottom: 120%;
+      bottom: 110%;
       left: 50%;
-      transform: translateX(-50%) translateY(6px);
+      transform: translateX(-50%) translateY(4px);
       background: rgba(253, 251, 247, 0.96);
       backdrop-filter: blur(12px);
       border: 0.5px solid var(--line-gold);
@@ -975,7 +838,7 @@
       pointer-events: none;
       opacity: 0;
       box-shadow: 0 6px 20px rgba(45, 41, 38, 0.1);
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
     .hotspot-pin:hover .hotspot-tooltip,
     .hotspot-pin:focus .hotspot-tooltip {
@@ -983,7 +846,7 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    /* Hotspot Drawer Modal */
+    /* Modal Drawer */
     .hotspot-drawer-overlay {
       position: fixed;
       inset: 0;
@@ -1036,7 +899,7 @@
     .drawer-title { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2rem); margin-bottom: 14px; }
     .drawer-img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       border-radius: 2px;
       margin-bottom: 18px;
@@ -1053,9 +916,7 @@
     .drawer-spec-item { display: flex; justify-content: space-between; padding: 6px 0; font-size: 0.75rem; }
     .drawer-spec-label { color: var(--taupe-muted); letter-spacing: 0.1em; text-transform: uppercase; }
 
-    /* =============================================================
-       EDITORIAL PACKAGE TIERS
-    ============================================================= */
+    /* Packages */
     .packages-editorial-container {
       max-width: 1220px;
       margin: 0 auto clamp(50px, 8vw, 90px) auto;
@@ -1075,7 +936,6 @@
       flex-direction: column;
       justify-content: space-between;
       box-shadow: 0 12px 35px rgba(45, 41, 38, 0.04);
-      transition: transform 0.3s ease;
     }
     .package-card.featured {
       border: 0.5px solid var(--pale-gold);
@@ -1099,13 +959,7 @@
       padding-bottom: 18px;
       margin-bottom: 20px;
     }
-    .package-tier-num {
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--pale-gold-dark);
-      margin-bottom: 6px;
-    }
+    .package-tier-num { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--pale-gold-dark); margin-bottom: 6px; }
     .package-name { font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 6px; }
     .package-guest-count { font-size: 0.75rem; color: var(--taupe-muted); font-style: italic; }
     .package-price-wrap { margin-top: 12px; }
@@ -1134,9 +988,7 @@
       margin-top: 2px;
     }
 
-    /* =============================================================
-       LIVE PACKAGE BUILDER
-    ============================================================= */
+    /* Live Package Builder */
     .bespoke-builder-card {
       max-width: 1100px;
       margin: 0 auto;
@@ -1209,7 +1061,6 @@
       padding: 12px 14px;
       border-radius: 4px;
       cursor: pointer;
-      transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       gap: 3px;
@@ -1221,11 +1072,7 @@
     .radio-tier-name { font-family: var(--font-serif); font-size: 1rem; }
     .radio-tier-meta { font-size: 0.65rem; color: var(--taupe-muted); }
 
-    .addon-checkbox-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .addon-checkbox-list { display: flex; flex-direction: column; gap: 10px; }
     .addon-checkbox-label {
       display: flex;
       align-items: center;
@@ -1255,12 +1102,7 @@
       background: var(--pale-gold-dark);
       border-color: var(--pale-gold-dark);
     }
-    .custom-check-box svg {
-      width: 10px;
-      height: 10px;
-      stroke: #FFFFFF;
-      opacity: 0;
-    }
+    .custom-check-box svg { width: 10px; height: 10px; stroke: #FFFFFF; opacity: 0; }
     .addon-checkbox-label.selected .custom-check-box svg { opacity: 1; }
 
     .builder-receipt-col {
@@ -1294,9 +1136,7 @@
     }
     .receipt-total-num { font-family: var(--font-serif); font-size: 1.7rem; color: var(--pale-gold-dark); }
 
-    /* =============================================================
-       SECTION 4: BOOKING FOOTER
-    ============================================================= */
+    /* Footer */
     .booking-footer-section {
       position: relative;
       background: #F8F4EE;
@@ -1373,10 +1213,6 @@
       border-top: 0.5px solid var(--line-subtle);
       margin-bottom: 30px;
     }
-    .footer-col-brand .brand-name {
-      font-size: 2.2rem;
-      margin-bottom: 4px;
-    }
     .footer-editorial-quote {
       font-family: var(--font-serif);
       font-style: italic;
@@ -1426,7 +1262,6 @@
       gap: 10px;
     }
 
-    /* Modal */
     .success-modal-overlay {
       position: fixed;
       inset: 0;
@@ -1464,38 +1299,34 @@
       color: var(--pale-gold-dark);
     }
 
-    /* =============================================================
-       MOBILE-FIRST RESPONSIVE FIXES (PHONE & TABLET)
-    ============================================================= */
+    /* Mobile First Responsive Styles */
     @media (max-width: 1024px) {
       .site-header { padding: 14px 24px; }
       .site-header.scrolled { padding: 10px 24px; }
       .nav-links { display: none; }
       .mobile-menu-toggle { display: flex; }
-      .header-actions .btn-pill { display: none; } /* Kept in mobile drawer */
+      .header-actions .btn-pill { display: none; }
       .gallery-prints-wrapper { grid-template-columns: 1fr; }
       .glass-showcase-wrapper { grid-template-columns: 1fr; }
       .builder-step-grid { grid-template-columns: 1fr; }
       .builder-receipt-col { position: static; }
       .footer-bottom-grid { grid-template-columns: 1fr; }
       .winding-path-svg-bg { display: none; }
-      .floral-cluster { opacity: 0.4; width: 180px; }
+      .floral-cluster { opacity: 0.35; width: 170px; }
     }
 
     @media (max-width: 768px) {
       .site-header { padding: 12px 18px; }
-      .header-brand-logo { height: 60px; max-width: 200px; }
-      .hero-section { padding-top: 110px; }
-      .floral-cluster { display: none; } /* Remove floral side clash on phones */
-      .hero-content { padding: 0 10px; }
+      .header-brand-logo { height: 40px; max-width: 135px; }
+      .hero-section { padding-top: 100px; }
+      .floral-cluster { display: none; }
+      .hero-content { padding: 0 6px; }
       .hero-cta-group { flex-direction: column; width: 100%; gap: 12px; }
       .hero-cta-group .btn-pill { width: 100%; }
       .reservation-form-grid { grid-template-columns: 1fr; }
       .tier-radio-group { grid-template-columns: 1fr; }
       .path-progress-tracker { width: 100%; justify-content: flex-start; }
       .glass-assembly-stage { height: 310px; }
-      .exploded-mode .glass-assembly-stage { transform: none; } /* keep stable on touch */
-      .exploded-toggle-btn { display: none; }
       .whatsapp-direct-banner { flex-direction: column; align-items: flex-start; }
       .whatsapp-direct-banner .btn-pill { width: 100%; }
       .footer-legal-bar { flex-direction: column; text-align: center; }
@@ -1504,14 +1335,11 @@
 </head>
 <body class="texture-paper">
 
-  <!-- Custom Cursor for Desktop -->
   <div class="custom-cursor" id="customCursor"></div>
   <div class="custom-cursor-dot" id="customCursorDot"></div>
 
-  <!-- Mobile Slide-out Menu Overlay -->
+  <!-- Mobile Drawer -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="toggleMobileMenu()"></div>
-
-  <!-- Mobile Slide-out Drawer -->
   <div class="mobile-nav-drawer" id="mobileNavDrawer">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
@@ -1522,6 +1350,7 @@
         <li><a href="#bloomingGateway" class="mobile-nav-link" onclick="toggleMobileMenu()">The Gateway</a></li>
         <li><a href="#gardenWalk" class="mobile-nav-link" onclick="toggleMobileMenu()">The Garden Walk</a></li>
         <li><a href="#picnicDestination" class="mobile-nav-link" onclick="toggleMobileMenu()">The Setup</a></li>
+        <li><a href="#realGallerySection" class="mobile-nav-link" onclick="toggleMobileMenu()">Event Gallery</a></li>
         <li><a href="#packagesSection" class="mobile-nav-link" onclick="toggleMobileMenu()">Packages</a></li>
         <li><a href="#reserveSection" class="mobile-nav-link" onclick="toggleMobileMenu()">Reserve Date</a></li>
       </ul>
@@ -1533,30 +1362,26 @@
     </div>
   </div>
 
-  <!-- Top Header Bar -->
+  <!-- Header -->
   <header class="site-header" id="siteHeader">
     <a href="#" class="header-logo-group">
-      <!-- Logo image: drops logo.png or uses inline fallback -->
       <img 
         src="Hea_Ho_logo.png" 
-        onerror="this.onerror=null; this.src='Hea_Ho_logo.png';" 
         alt="Heavenly Hosts — Hosting &amp; Decor" 
         class="header-brand-logo"
       >
     </a>
 
-    <!-- Desktop Navigation Links -->
     <ul class="nav-links">
       <li><a href="#bloomingGateway" class="nav-link">The Gateway</a></li>
       <li><a href="#gardenWalk" class="nav-link">The Garden Walk</a></li>
       <li><a href="#picnicDestination" class="nav-link">The Setup</a></li>
+      <li><a href="#realGallerySection" class="nav-link">Gallery</a></li>
       <li><a href="#packagesSection" class="nav-link">Packages</a></li>
       <li><a href="#reserveSection" class="nav-link">Reserve</a></li>
     </ul>
 
-    <!-- Header Actions -->
     <div class="header-actions">
-      <!-- Currency Switcher -->
       <div class="currency-select-wrap">
         <select class="currency-select" id="currencySelector" title="Select Currency">
           <option value="ZAR" selected>ZAR (R)</option>
@@ -1571,7 +1396,6 @@
         <span>Reserve Date</span>
       </a>
 
-      <!-- Mobile Hamburger Toggle -->
       <button class="mobile-menu-toggle" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
         <span class="menu-bar"></span>
         <span class="menu-bar"></span>
@@ -1581,12 +1405,11 @@
   </header>
 
   <!-- =============================================================
-       HERO FRAME (REPLACED BUTTON WITH "SEE THE SETUP")
+       HERO FRAME
   ============================================================= -->
   <section class="hero-section section-transition-mask" id="bloomingGateway">
     <canvas id="petalCanvas"></canvas>
 
-    <!-- Side Floral Sprigs (Scaled safely for all screens) -->
     <div class="hero-floral-frame">
       <svg class="floral-cluster floral-cluster-left" viewBox="0 0 450 900" fill="none">
         <circle cx="80" cy="180" r="75" fill="#F4CFD5"/>
@@ -1594,18 +1417,12 @@
         <circle cx="80" cy="175" r="35" fill="#BF5B6A"/>
         <circle cx="160" cy="340" r="60" fill="#FAF7F2" stroke="#E6DDCF" stroke-width="1.5"/>
         <circle cx="95" cy="580" r="85" fill="#F4CFD5"/>
-        <path d="M 95 510 C 55 530 45 590 75 625 C 105 660 155 650 170 600 C 185 550 145 500 95 510 Z" fill="#D9828E"/>
         <ellipse cx="60" cy="100" rx="14" ry="24" fill="#8F9887" transform="rotate(-30 60 100)"/>
-        <ellipse cx="180" cy="460" rx="18" ry="30" fill="#7A8471" transform="rotate(-15 180 460)"/>
       </svg>
-
       <svg class="floral-cluster floral-cluster-right" viewBox="0 0 450 900" fill="none">
         <circle cx="80" cy="180" r="75" fill="#F4CFD5"/>
-        <path d="M 80 120 C 50 140 40 180 65 210 C 90 240 130 230 145 190 C 160 150 120 110 80 120 Z" fill="#D9828E"/>
-        <circle cx="80" cy="175" r="35" fill="#BF5B6A"/>
         <circle cx="160" cy="340" r="60" fill="#FAF7F2" stroke="#E6DDCF" stroke-width="1.5"/>
         <circle cx="95" cy="580" r="85" fill="#F4CFD5"/>
-        <ellipse cx="60" cy="100" rx="14" ry="24" fill="#8F9887" transform="rotate(-30 60 100)"/>
       </svg>
     </div>
 
@@ -1626,7 +1443,6 @@
       </p>
 
       <div class="hero-cta-group">
-        <!-- Replaced "Begin Garden Walk" with "See The Setup" -->
         <a href="#picnicDestination" class="btn-pill" id="seeSetupBtn">
           <span>See The Setup</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1651,7 +1467,6 @@
        SECTION 2: THE GARDEN PATHWAY
   ============================================================= -->
   <section class="garden-path-section section-transition-mask-top" id="gardenWalk">
-    <!-- Floating Waypoint Navigator -->
     <div class="path-progress-tracker">
       <button class="tracker-step active" onclick="scrollToWaypoint('milestoneStop1')" id="stepBtn1">
         <span class="tracker-dot"></span>
@@ -1680,7 +1495,7 @@
         <circle id="pathTravelerNode" class="path-traveler-node" cx="600" cy="0" r="8" />
       </svg>
 
-      <!-- STOP 1: THE WELCOME -->
+      <!-- STOP 1 -->
       <div class="milestone-waypoint-row align-left" id="milestoneStop1">
         <div class="welcome-card-content">
           <span class="deckle-corner-pin"></span>
@@ -1704,17 +1519,22 @@
         </div>
       </div>
 
-      <!-- STOP 2: INTIMATE GATHERINGS GALLERY -->
+      <!-- STOP 2 (Photo 2 featured in fine art frame) -->
       <div class="milestone-waypoint-row align-right" id="milestoneStop2">
         <div class="gallery-prints-wrapper">
-          <div class="print-frame" onclick="openHotspotDrawer('intimate')">
+          <div class="print-frame" onclick="openHotspotDrawer('table')">
             <span class="brass-push-pin"></span>
             <div class="print-image-container">
-              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Intimate setup">
+              <!-- Photo 2: Low table perspective with roses -->
+              <img 
+                src="picnic_2.jpg.jpg" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80';" 
+                alt="Heavenly Hosts intimate low banquet layout"
+              >
             </div>
             <div class="print-caption">
-              <h4 class="print-title">The Sunset Sanctuary</h4>
-              <p class="print-details">2–4 Guests • Intimate Proposals &amp; Anniversaries</p>
+              <h4 class="print-title">The Grand Garden Vista</h4>
+              <p class="print-details">Reclaimed Pine Low Tables &amp; Fluted Rose Urns</p>
             </div>
           </div>
 
@@ -1723,11 +1543,10 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/></svg>
               <span>Stop 02 • Intimate Formations</span>
             </div>
-            <h2 class="stop-title">Purity for Two to Four</h2>
+            <h2 class="stop-title">Purity for Two to Twenty</h2>
             <p class="stop-body">
-              Our intimate curations are designed as private open-air sanctuaries. Pinned to the 
-              landscape like fine art prints, each setting pairs low-slung reclaimed timber tables 
-              with layered Persian carpets, plush ivory velvet cushions, and hand-poured taper candles.
+              Our setups pair continuous low-slung banquet tables with long white fur runners, 
+              hand-placed amber goblets, and fresh coral rose centerpieces resting under sunlit trees.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
               <button class="btn-pill" onclick="openHotspotDrawer('mattress')">
@@ -1741,7 +1560,7 @@
         </div>
       </div>
 
-      <!-- STOP 3: BESPOKE ADD-ONS -->
+      <!-- STOP 3 -->
       <div class="milestone-waypoint-row align-center" id="milestoneStop3">
         <div class="glass-showcase-wrapper">
           <div class="glass-assembly-stage" id="glassAssemblyStage">
@@ -1792,8 +1611,8 @@
               <div class="addon-info-left">
                 <span class="addon-bullet"></span>
                 <div>
-                  <h5 class="addon-title">Personalized Acrylic Signage</h5>
-                  <p class="addon-desc">Frosted board with gold foil calligraphy &amp; easel</p>
+                  <h5 class="addon-title">Personalized Welcome Easel Board</h5>
+                  <p class="addon-desc">Custom celebratory lettering on artist studio easel</p>
                 </div>
               </div>
               <span class="addon-price">+R350</span>
@@ -1803,8 +1622,8 @@
               <div class="addon-info-left">
                 <span class="addon-bullet"></span>
                 <div>
-                  <h5 class="addon-title">Luxury Fringed Umbrella</h5>
-                  <p class="addon-desc">Bohemian macramé canvas parasol</p>
+                  <h5 class="addon-title">Artisanal Sun Parasols (Set of 6)</h5>
+                  <p class="addon-desc">Fuchsia &amp; white sun umbrellas lining the lawn</p>
                 </div>
               </div>
               <span class="addon-price">+R450</span>
@@ -1822,9 +1641,6 @@
             </div>
 
             <div style="display: flex; gap: 12px; align-items: center; margin-top: 18px; flex-wrap: wrap;">
-              <button class="exploded-toggle-btn" id="explodedToggleBtn" onclick="toggleExplodedView()">
-                <span>Toggle 3D Exploded View</span>
-              </button>
               <a href="#builderSection" class="btn-pill" style="padding: 9px 20px; font-size: 0.65rem;">
                 <span>Build Full Package</span>
               </a>
@@ -1836,7 +1652,7 @@
   </section>
 
   <!-- =============================================================
-       SECTION 3: THE DESTINATION PICNIC SPREAD
+       SECTION 3: DESTINATION PICNIC WITH FIRST IMAGE & ACCURATE HOTSPOTS
   ============================================================= -->
   <section class="picnic-destination-section section-transition-mask" id="picnicDestination">
     <div class="section-header-editorial">
@@ -1845,62 +1661,146 @@
         The Sun-Dappled <em>Picnic Spread</em>
       </h2>
       <p class="section-dek">
-        At the end of the stone path, the garden opens into an immaculate private clearing. 
-        Explore the interactive hotspots below to discover the curated artisan pieces that compose every Heavenly Hosts picnic.
+        Laid out across the open green lawn under majestic canopy trees. Tap any pulsing gold hotspot
+        on our authentic setup below to inspect the artisanal pieces crafted for your celebration.
       </p>
     </div>
 
-    <!-- Interactive Showcase Frame with 6 Hotspots -->
+    <!-- First Image Setup Frame with Pinpoint Hotspots -->
     <div class="picnic-interactive-canvas-frame">
       <div class="picnic-image-hotspots-wrap">
-        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1920&q=80" alt="Heavenly Hosts luxury picnic setup">
+        <!-- First Photo: Your wide lawn picnic setup -->
+        <img 
+          src="picnic_1.jpg.jpg" 
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1920&q=80';" 
+          alt="Heavenly Hosts authentic luxury picnic setup with white fur runners and coral florals"
+        >
         <div class="picnic-sunlight-overlay"></div>
 
-        <button class="hotspot-pin" style="top: 76%; left: 65%;" onclick="openHotspotDrawer('table')" title="Low Picnic Tables">
+        <!-- Hotspot 1: White Fur Runners Lounge -->
+        <button class="hotspot-pin" data-image-x="43" data-image-y="73" onclick="openHotspotDrawer('mattress')" title="White Fur Runners">
           <div class="hotspot-pulse"></div>
           <div class="hotspot-center"></div>
-          <div class="hotspot-tooltip">Solid Pine Low Tables</div>
+          <div class="hotspot-tooltip">White Fur Runners &amp; Lawn Seating</div>
         </button>
 
-        <button class="hotspot-pin" style="top: 84%; left: 24%;" onclick="openHotspotDrawer('mattress')" title="Tufted Mattress">
-          <div class="hotspot-pulse" style="animation-delay: 0.6s;"></div>
+        <!-- Hotspot 2: Damask Low Banquet Table -->
+        <button class="hotspot-pin" data-image-x="57" data-image-y="68" onclick="openHotspotDrawer('table')" title="Low Banquet Table">
+          <div class="hotspot-pulse" style="animation-delay: 0.5s;"></div>
           <div class="hotspot-center"></div>
-          <div class="hotspot-tooltip">Tufted Mattress &amp; Cushions</div>
+          <div class="hotspot-tooltip">Damask Low Banquet Table</div>
         </button>
 
-        <button class="hotspot-pin" style="top: 25%; left: 22%;" onclick="openHotspotDrawer('umbrella')" title="Fringed Canvas Parasol">
-          <div class="hotspot-pulse" style="animation-delay: 1.2s;"></div>
+        <!-- Hotspot 3: Fluted Floral Vases with Roses -->
+        <button class="hotspot-pin" data-image-x="60" data-image-y="64" onclick="openHotspotDrawer('florals')" title="Fluted Rose Arrangements">
+          <div class="hotspot-pulse" style="animation-delay: 1.0s;"></div>
           <div class="hotspot-center"></div>
-          <div class="hotspot-tooltip">Luxury Fringed Parasol</div>
+          <div class="hotspot-tooltip">Fluted Urns &amp; Coral Roses</div>
         </button>
 
-        <button class="hotspot-pin" style="top: 70%; left: 82%;" onclick="openHotspotDrawer('glassware')" title="Cut-Crystal Stemware">
-          <div class="hotspot-pulse" style="animation-delay: 1.8s;"></div>
-          <div class="hotspot-center"></div>
-          <div class="hotspot-tooltip">Cut-Crystal Flutes</div>
-        </button>
-
-        <button class="hotspot-pin" style="top: 55%; left: 52%;" onclick="openHotspotDrawer('signage')" title="Personalized Welcome Board">
-          <div class="hotspot-pulse" style="animation-delay: 0.9s;"></div>
-          <div class="hotspot-center"></div>
-          <div class="hotspot-tooltip">Personalized Signage</div>
-        </button>
-
-        <button class="hotspot-pin" style="top: 68%; left: 45%;" onclick="openHotspotDrawer('florals')" title="Silk Ivory Arrangements">
+        <!-- Hotspot 4: Left Parasols -->
+        <button class="hotspot-pin" data-image-x="22" data-image-y="67" onclick="openHotspotDrawer('umbrella')" title="Fuchsia & White Parasols">
           <div class="hotspot-pulse" style="animation-delay: 1.5s;"></div>
           <div class="hotspot-center"></div>
-          <div class="hotspot-tooltip">Ivory Silk Botanicals</div>
+          <div class="hotspot-tooltip">Artisanal Sun Parasols</div>
+        </button>
+
+        <!-- Hotspot 5: Welcome Easel Board in distance -->
+        <button class="hotspot-pin" data-image-x="63" data-image-y="59" onclick="openHotspotDrawer('signage')" title="Personalized Welcome Board">
+          <div class="hotspot-pulse" style="animation-delay: 0.8s;"></div>
+          <div class="hotspot-center"></div>
+          <div class="hotspot-tooltip">Personalized Welcome Easel</div>
+        </button>
+
+        <!-- Hotspot 6: Amber Crystal Glassware & Table Settings -->
+        <button class="hotspot-pin" data-image-x="62" data-image-y="72" onclick="openHotspotDrawer('glassware')" title="Amber Crystal Goblets">
+          <div class="hotspot-pulse" style="animation-delay: 1.2s;"></div>
+          <div class="hotspot-center"></div>
+          <div class="hotspot-tooltip">Amber Cut-Crystal Goblets</div>
         </button>
       </div>
 
       <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 6px 4px 6px; font-size: 0.68rem; color: var(--taupe-muted); flex-wrap: wrap; gap: 8px;">
-        <span>✦ Click any pulsing gold hotspot on the picnic spread to reveal artisan specifications</span>
+        <span>✦ Tap any pulsing gold circle on the setup to reveal details</span>
         <span style="letter-spacing: 0.15em; text-transform: uppercase;">6 Interactive Elements</span>
       </div>
     </div>
 
+    <!-- =============================================================
+         EVENT GALLERY: REMAINING REAL PHOTOS IN FINE ART FRAMES
+    ============================================================= -->
+    <div class="real-gallery-section" id="realGallerySection">
+      <div class="section-header-editorial" style="margin-bottom: 24px;">
+        <span class="section-kicker">Atelier Highlights</span>
+        <h3 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.5rem);">Bespoke Styling Moments</h3>
+        <p class="section-dek">A curated glimpse into our live park gatherings, tableware layering, and floral artistry.</p>
+      </div>
+
+      <div class="gallery-grid-mosaic">
+        <!-- Photo 3: Overhead Table View -->
+        <div class="print-frame" onclick="openHotspotDrawer('glassware')">
+          <span class="brass-push-pin"></span>
+          <div class="print-image-container">
+            <img src="picnic_3.jpg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80';" alt="Overhead table place settings">
+          </div>
+          <div class="print-caption">
+            <h4 class="print-title">The Curated Place Setting</h4>
+            <p class="print-details">Gold Rim Chargers, Amber Flutes &amp; Chiffon</p>
+          </div>
+        </div>
+
+        <!-- Photo 4: Wide Park Landscape View -->
+        <div class="print-frame" onclick="openHotspotDrawer('table')">
+          <span class="brass-push-pin"></span>
+          <div class="print-image-container">
+            <img src="picnic_4.jpg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80';" alt="Wide open park banquet setting">
+          </div>
+          <div class="print-caption">
+            <h4 class="print-title">The Open-Air Sanctuary</h4>
+            <p class="print-details">Full 20-Guest Lawn Layout &amp; Parasol Line</p>
+          </div>
+        </div>
+
+        <!-- Photo 5: Close-up Fluted Urn & Goblets -->
+        <div class="print-frame" onclick="openHotspotDrawer('florals')">
+          <span class="brass-push-pin"></span>
+          <div class="print-image-container">
+            <img src="picnic_5.jpg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80';" alt="Fluted white vase with orange roses">
+          </div>
+          <div class="print-caption">
+            <h4 class="print-title">Architectural Florals</h4>
+            <p class="print-details">Fluted Classical Urns &amp; Tapered Glassware</p>
+          </div>
+        </div>
+
+        <!-- Photo 6: Celebration Table with Guests -->
+        <div class="print-frame" onclick="openHotspotDrawer('signage')">
+          <span class="brass-push-pin"></span>
+          <div class="print-image-container">
+            <img src="picnic_6.jpg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80';" alt="Guest celebration with pink favors">
+          </div>
+          <div class="print-caption">
+            <h4 class="print-title">Cherished Celebrations</h4>
+            <p class="print-details">Milestone Birthdays &amp; Personal Favors</p>
+          </div>
+        </div>
+
+        <!-- Photo 7: Long Perspective with Purple and Coral Roses -->
+        <div class="print-frame" onclick="openHotspotDrawer('florals')">
+          <span class="brass-push-pin"></span>
+          <div class="print-image-container">
+            <img src="picnic_7.jpg.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80';" alt="Perspective view of vibrant roses">
+          </div>
+          <div class="print-caption">
+            <h4 class="print-title">Everlasting Bloom Runner</h4>
+            <p class="print-details">Alternating Rose Urns &amp; Tulle Drapes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Editorial Package Pricing Cards -->
-    <div class="packages-editorial-container" id="packagesSection">
+    <div class="packages-editorial-container" id="packagesSection" style="margin-top: 100px;">
       <div class="section-header-editorial" style="margin-bottom: 40px;">
         <span class="section-kicker">Curated Collections</span>
         <h2 class="section-headline">Signature <em>Package Tiers</em></h2>
@@ -1924,9 +1824,9 @@
           <ul class="package-features">
             <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>2-Hour Private Sanctuary Setup</span></li>
             <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>1 Solid Reclaimed Pine Low Table</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Persian Rug Foundation &amp; 6 Cushions</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>White Plush Fur Runner &amp; Cushions</span></li>
             <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Cut-Crystal Flutes &amp; Gold Cutlery</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Silk Cream Floral Vases &amp; Candles</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Silk Rose Centerpiece in Fluted Urn</span></li>
           </ul>
           <button class="btn-pill" onclick="selectTierInBuilder('serenade', 1250, 2)">
             <span>Select This Tier</span>
@@ -1946,10 +1846,10 @@
           </div>
           <ul class="package-features">
             <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>3-Hour Extended Private Sanctuary</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>2 Low-Slung Wooden Tables &amp; Double Rugs</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Tufted Comfort Mattress &amp; 12 Cushions</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Personalized Acrylic Welcome Signage</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Luxury Fringed Canvas Umbrella Included</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>2 Low-Slung Wooden Tables &amp; Runners</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Dual White Fur Runners &amp; Cushions</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Personalized Welcome Easel Signage</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Lawn Parasol Umbrellas Included</span></li>
           </ul>
           <button class="btn-pill btn-pill-gold" onclick="selectTierInBuilder('petite', 2400, 6)">
             <span>Select This Tier</span>
@@ -1968,9 +1868,9 @@
           </div>
           <ul class="package-features">
             <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>4-Hour Sanctuary with On-Site Attendant</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>3 Continuous Low Oak Tables</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Double Mattress Lounges &amp; 20+ Cushions</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Mini Pearl Balloon Garland &amp; Signage</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>3 Continuous Low Damask Banquet Tables</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Full Fur Runner Runway &amp; 16+ Cushions</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Alternating Urn Florals &amp; Amber Flutes</span></li>
           </ul>
           <button class="btn-pill" onclick="selectTierInBuilder('grand', 3450, 12)">
             <span>Select This Tier</span>
@@ -1981,7 +1881,7 @@
           <div class="package-header">
             <span class="package-tier-num">Tier 04 • 15 to 20 Guests</span>
             <h3 class="package-name">The Celestial Estate</h3>
-            <p class="package-guest-count">Weddings, Milestone Jubilees, Luxury Retreats</p>
+            <p class="package-guest-count">Full Park Banquets &amp; Milestone Celebrations</p>
             <div class="package-price-wrap">
               <span class="package-price" data-zar="4300">R4,300</span>
               <span class="package-price-sub">/ tailored estate styling</span>
@@ -1989,9 +1889,9 @@
           </div>
           <ul class="package-features">
             <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Full Day Sanctuary (5+ Hours)</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Dual Lounge Zones &amp; 4 Low Picnic Tables</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Grand 3-Meter Neutral Balloon Installation</span></li>
-            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Dual Luxury Fringed Umbrellas &amp; Parasols</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Complete 20-Guest Continuous Banquet</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Flanked Line of 8 Fuchsia &amp; White Parasols</span></li>
+            <li class="package-feature"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2"/></svg><span>Custom Welcome Easel &amp; Dedicated Host</span></li>
           </ul>
           <button class="btn-pill" onclick="selectTierInBuilder('celestial', 4300, 20)">
             <span>Select This Tier</span>
@@ -2000,7 +1900,7 @@
       </div>
     </div>
 
-    <!-- Live Package Estimator (Max 20 Guests & Price Increases only after every EVEN number) -->
+    <!-- Live Package Estimator (Max 20 Guests, Price Increases only after every EVEN number) -->
     <div class="bespoke-builder-card" id="builderSection">
       <div class="section-header-editorial" style="margin-bottom: 26px;">
         <span class="section-kicker">Custom Curation Engine</span>
@@ -2051,8 +1951,8 @@
                 <div class="addon-label-left">
                   <div class="custom-check-box"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-width="2.5"/></svg></div>
                   <div>
-                    <span style="font-size: 0.84rem;">Personalized Welcome Acrylic Board</span>
-                    <p style="font-size: 0.66rem; color: var(--taupe-muted);">Hand-lettered with names &amp; floral accent</p>
+                    <span style="font-size: 0.84rem;">Personalized Welcome Chalkboard Easel</span>
+                    <p style="font-size: 0.66rem; color: var(--taupe-muted);">Custom calligraphy with floral crown</p>
                   </div>
                 </div>
                 <span style="font-size: 0.8rem; font-weight: 500; color: var(--pale-gold-dark);" data-zar="350">+R350</span>
@@ -2062,8 +1962,8 @@
                 <div class="addon-label-left">
                   <div class="custom-check-box"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-width="2.5"/></svg></div>
                   <div>
-                    <span style="font-size: 0.84rem;">Luxury Fringed Canvas Umbrella</span>
-                    <p style="font-size: 0.66rem; color: var(--taupe-muted);">Handmade macramé cotton parasol for shade</p>
+                    <span style="font-size: 0.84rem;">Set of 6 Sun Parasols</span>
+                    <p style="font-size: 0.66rem; color: var(--taupe-muted);">Fuchsia &amp; white lawn umbrellas for shade</p>
                   </div>
                 </div>
                 <span style="font-size: 0.8rem; font-weight: 500; color: var(--pale-gold-dark);" data-zar="450">+R450</span>
@@ -2074,7 +1974,7 @@
                   <div class="custom-check-box"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-width="2.5"/></svg></div>
                   <div>
                     <span style="font-size: 0.84rem;">Bespoke Balloon Arch Garland</span>
-                    <p style="font-size: 0.66rem; color: var(--taupe-muted);">Organic pearlescent cream, blush &amp; ivory balloons</p>
+                    <p style="font-size: 0.66rem; color: var(--taupe-muted);">Organic pearlescent cream, blush &amp; ivory</p>
                   </div>
                 </div>
                 <span style="font-size: 0.8rem; font-weight: 500; color: var(--pale-gold-dark);" data-zar="750">+R750</span>
@@ -2107,7 +2007,7 @@
                 <span id="receiptBasePrice">R2,400</span>
               </li>
               <li class="receipt-line" id="receiptAddon_umbrella">
-                <span>Luxury Fringed Umbrella</span>
+                <span>Set of 6 Sun Parasols</span>
                 <span>+R450</span>
               </li>
               <li class="receipt-line">
@@ -2247,6 +2147,7 @@
             <li class="footer-link-item"><a href="#bloomingGateway">The Gateway</a></li>
             <li class="footer-link-item"><a href="#gardenWalk">The Garden Path</a></li>
             <li class="footer-link-item"><a href="#picnicDestination">The Setup</a></li>
+            <li class="footer-link-item"><a href="#realGallerySection">Event Gallery</a></li>
             <li class="footer-link-item"><a href="#packagesSection">Package Tiers</a></li>
           </ul>
         </div>
@@ -2277,12 +2178,12 @@
         <div style="margin-top: 18px;">
           <span class="drawer-badge" id="drawerBadge">Picnic Architecture</span>
           <h3 class="drawer-title" id="drawerTitle">Low Picnic Tables</h3>
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Hotspot detail" class="drawer-img" id="drawerImg">
+          <img src="picnic_1.jpg.jpg" alt="Hotspot detail" class="drawer-img" id="drawerImg">
           <p class="drawer-description" id="drawerDesc">
-            Solid pine low picnic tables hand-treated in natural warm sand stain. Layered with natural oatmeal frayed-edge linen runners, ribbed ceramic vases, and soft ivory taper candles.
+            Solid pine low picnic tables hand-treated in natural warm sand stain. Layered with damask runners, amber crystal goblets, and fresh coral rose centerpieces.
           </p>
           <ul class="drawer-specs" id="drawerSpecs">
-            <li class="drawer-spec-item"><span class="drawer-spec-label">Material</span><span class="drawer-spec-value">South African Pine &amp; Belgian Linen</span></li>
+            <li class="drawer-spec-item"><span class="drawer-spec-label">Material</span><span class="drawer-spec-value">South African Pine &amp; Damask Jacquard</span></li>
             <li class="drawer-spec-item"><span class="drawer-spec-label">Height</span><span class="drawer-spec-value">38 cm (Ergonomic Low Seating)</span></li>
           </ul>
         </div>
@@ -2328,63 +2229,87 @@
       selectedTier: 'petite',
       tierBaseZAR: 2400,
       guestCount: 4,
-      selectedAddons: { umbrella: { name: 'Luxury Fringed Umbrella', priceZAR: 450, active: true } },
+      selectedAddons: { umbrella: { name: 'Set of 6 Sun Parasols', priceZAR: 450, active: true } },
       explodedView: false
     };
 
+    // Hotspot Data calibrated to authentic photos
     const HOTSPOT_DATA = {
       table: {
         badge: 'Handcrafted Furniture',
-        title: 'Reclaimed Low Oak & Pine Tables',
-        img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
-        desc: 'Custom-built low picnic tables crafted from reclaimed South African pine. Stained in a soft sand hue to preserve grain texture, finished with organic raw-frayed linen runners and ivory taper candles.',
-        specs: [{ label: 'Dimensions', value: '180 cm × 60 cm × 38 cm height' }, { label: 'Seating', value: 'Accommodates 4 to 6 guests per table' }]
+        title: 'Damask Low Banquet Table',
+        img: 'picnic_1.jpg.jpg',
+        desc: 'Continuous low-slung banquet table draped with shimmering damask jacquard linen, paired with individual gold rim chargers, personalized floral napkins, and gold titanium flatware.',
+        specs: [{ label: 'Dimensions', value: 'Up to 20 Guests Continuous Seating' }, { label: 'Styling', value: 'Damask Jacquard & Chiffon Tulle' }]
       },
       mattress: {
         badge: 'Artisanal Comfort',
-        title: 'Tufted Mattress & Layered Rugs',
-        img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-        desc: 'A cloud of sensory comfort. Multi-layered vintage Persian rugs support a high-density tufted foam mattress, flanked by plush velvet and stonewashed linen scatter cushions in sand, taupe, and ivory.',
-        specs: [{ label: 'Mattress', value: 'High-density foam with water-resistant base' }, { label: 'Cushions', value: '12 to 24 oversized velvet & linen cushions' }]
+        title: 'White Fur Runners & Ground Seating',
+        img: 'picnic_1.jpg.jpg',
+        desc: 'Dual long white plush fur runners lining both sides of the table, offering a clean, soft foundation for guests seated under the open park canopy.',
+        specs: [{ label: 'Runner Type', value: 'Double-sided plush white fur' }, { label: 'Length', value: '10 to 12 meters continuous runway' }]
       },
       umbrella: {
-        badge: 'Shade & Architecture',
-        title: 'Luxury Fringed Canvas Parasol',
-        img: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80',
-        desc: 'An iconic vintage silhouette. Heavyweight ivory cotton canvas canopy offering UV protection, rimmed with hand-tied bohemian macramé fringe.',
-        specs: [{ label: 'Canopy Span', value: '2.0 meters diameter' }, { label: 'Material', value: '100% Cotton canvas & Teak wood pole' }]
+        badge: 'Shade & Atmosphere',
+        title: 'Artisanal Sun Parasols (Set of 6)',
+        img: 'picnic_4.jpg.jpg',
+        desc: 'Vibrant fuchsia and white Japanese sun parasols placed along the lawn border to provide delicate shade and picturesque photographic framing.',
+        specs: [{ label: 'Quantity', value: 'Set of 6 to 8 umbrellas' }, { label: 'Colors', value: 'Fuchsia floral & White paper' }]
       },
       glassware: {
         badge: 'Deluxe Dining',
-        title: 'Cut-Crystal Flutes & Gold Cutlery',
-        img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
-        desc: 'Every place setting is dressed with vintage cut-crystal champagne flutes, matte gold titanium flatware, and natural linen napkins.',
-        specs: [{ label: 'Glassware', value: 'Heavyweight cut-crystal flutes' }, { label: 'Cutlery', value: 'Brushed champagne gold flatware' }]
+        title: 'Amber Cut-Crystal Goblets',
+        img: 'picnic_3.jpg.jpg',
+        desc: 'Every place setting is dressed with vintage embossed amber crystal goblets, gold cutlery, and botanical keepsake place settings.',
+        specs: [{ label: 'Glassware', value: 'Heavyweight amber cut-crystal' }, { label: 'Place Setting', value: 'Gold rim chargers & linen napkins' }]
       },
       signage: {
         badge: 'Bespoke Keepsake',
-        title: 'Personalized Welcome Board',
-        img: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
-        desc: 'Handcrafted frosted acrylic board set atop an artist timber easel. Custom calligraphed with the guest of honor’s name and date.',
-        specs: [{ label: 'Board Size', value: 'A2 (420 mm × 594 mm) Frosted Acrylic' }, { label: 'Stand', value: 'Natural pine artist studio easel' }]
+        title: 'Personalized Welcome Chalkboard Easel',
+        img: 'picnic_6.jpg.jpg',
+        desc: 'Handcrafted timber artist studio easel with custom celebratory calligraphy, finished with floral corner crowns and decorative party favors.',
+        specs: [{ label: 'Stand', value: 'Natural pine artist easel' }, { label: 'Personalization', value: 'Custom hand-drawn guest of honor message' }]
       },
       florals: {
         badge: 'Botanical Art',
-        title: 'Silk Ivory Botanicals & Lanterns',
-        img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
-        desc: 'Curated everlasting florals designed exclusively in shades of ivory, warm cream, and soft blush beige. Features silk English garden roses and ribbed glass hurricane lanterns.',
-        specs: [{ label: 'Florals', value: 'Silk garden roses & dried pampas' }, { label: 'Palette', value: 'Soft rose, ivory and champagne neutrals' }]
-      },
-      intimate: {
-        badge: 'Private Curations',
-        title: 'The Intimate Sanctuary (2–4 Guests)',
-        img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
-        desc: 'Specially orchestrated for romantic sunset marriage proposals and milestone anniversaries. Private, serene, and breathtakingly photographed.',
-        specs: [{ label: 'Ideal For', value: 'Secret proposals & Anniversaries' }, { label: 'Starting At', value: 'R1,250 all-inclusive' }]
+        title: 'Coral & Violet Fluted Urns',
+        img: 'picnic_5.jpg.jpg',
+        desc: 'A continuous line of classical fluted white urns overflowing with silk coral roses, fresh baby’s breath, and violet blooms spanning the table length.',
+        specs: [{ label: 'Vases', value: 'Fluted white neoclassical urns' }, { label: 'Arrangements', value: 'Alternating coral roses & purple florals' }]
       }
     };
 
-    // Mobile Menu Toggle
+    function positionPicnicHotspots() {
+      const wrapper = document.querySelector('.picnic-image-hotspots-wrap');
+      const image = wrapper?.querySelector('img');
+      if (!wrapper || !image || !image.naturalWidth) return;
+
+      const width = wrapper.clientWidth;
+      const height = wrapper.clientHeight;
+      const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+      const imageWidth = image.naturalWidth * scale;
+      const imageHeight = image.naturalHeight * scale;
+      const [positionX, positionY] = getComputedStyle(image).objectPosition
+        .split(' ')
+        .map(value => parseFloat(value) / 100);
+      const offsetX = (width - imageWidth) * positionX;
+      const offsetY = (height - imageHeight) * positionY;
+
+      wrapper.querySelectorAll('.hotspot-pin').forEach(pin => {
+        const imageX = parseFloat(pin.dataset.imageX) / 100;
+        const imageY = parseFloat(pin.dataset.imageY) / 100;
+        pin.style.left = `${(imageX * imageWidth + offsetX) / width * 100}%`;
+        pin.style.top = `${(imageY * imageHeight + offsetY) / height * 100}%`;
+      });
+    }
+
+    const picnicImage = document.querySelector('.picnic-image-hotspots-wrap img');
+    if (picnicImage) {
+      picnicImage.addEventListener('load', positionPicnicHotspots);
+      window.addEventListener('resize', positionPicnicHotspots);
+      positionPicnicHotspots();
+    }
+
     function toggleMobileMenu() {
       const drawer = document.getElementById('mobileNavDrawer');
       const overlay = document.getElementById('mobileNavOverlay');
@@ -2459,7 +2384,7 @@
       }
     }
     if (canvas && ctx) {
-      const count = window.innerWidth < 768 ? 20 : 38;
+      const count = window.innerWidth < 768 ? 18 : 36;
       for (let i = 0; i < count; i++) petals.push(new PetalParticle());
       function renderPetals() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -2516,19 +2441,13 @@
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    // 3D Exploded View Toggle
     function toggleExplodedView() {
       const stage = document.getElementById('glassAssemblyStage');
       if (!stage) return;
       APP_STATE.explodedView = !APP_STATE.explodedView;
       const wrapper = stage.closest('.glass-showcase-wrapper');
-      if (APP_STATE.explodedView) {
-        wrapper.classList.add('exploded-mode');
-        document.getElementById('explodedToggleBtn').textContent = 'Collapse Assembly View';
-      } else {
-        wrapper.classList.remove('exploded-mode');
-        document.getElementById('explodedToggleBtn').textContent = 'Toggle 3D Exploded View';
-      }
+      if (APP_STATE.explodedView) wrapper.classList.add('exploded-mode');
+      else wrapper.classList.remove('exploded-mode');
     }
 
     // Hotspot Drawer
@@ -2578,10 +2497,7 @@
       updateAllPricesInDOM();
     });
 
-    /* =============================================================
-       GUEST SLIDER & EVEN-ONLY PRICE JUMPS
-       Increases ONLY after every even number above tier base
-    ============================================================= */
+    // Guest Slider & Pricing (Increases only after every even guest count)
     function updateGuestSlider(val) {
       APP_STATE.guestCount = parseInt(val, 10);
       document.getElementById('guestCountDisplay').textContent = `${val} Guests`;
@@ -2620,8 +2536,8 @@
         element.classList.remove('selected');
       } else {
         const nameMap = {
-          signage: 'Personalized Acrylic Board',
-          umbrella: 'Luxury Fringed Umbrella',
+          signage: 'Personalized Welcome Chalkboard Easel',
+          umbrella: 'Set of 6 Sun Parasols',
           balloons: 'Pearl & Rose Balloon Arch',
           charcuterie: 'Artisanal Charcuterie Board'
         };
@@ -2651,7 +2567,7 @@
       let guestExtraCost = 0;
       if (APP_STATE.guestCount > tierBaseGuests) {
         const extraGuests = APP_STATE.guestCount - tierBaseGuests;
-        const evenPairs = Math.floor(extraGuests / 2); // only increases every 2 guests
+        const evenPairs = Math.floor(extraGuests / 2);
         guestExtraCost = evenPairs * 350;
         runningTotal += guestExtraCost;
       }
@@ -2681,7 +2597,6 @@
       }
     }
 
-    // Reservation Form
     function handleReservationSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('resName').value;
@@ -2699,7 +2614,6 @@
     }
     function closeSuccessModal() { document.getElementById('successModalOverlay').classList.remove('active'); }
 
-    // Initialization
     window.addEventListener('DOMContentLoaded', () => {
       renderBuilderReceipt();
       updateGardenWalkScroll();
