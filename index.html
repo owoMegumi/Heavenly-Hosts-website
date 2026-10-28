@@ -2,6 +2,7 @@
 <!--Model 9:11 AM
 ### Complete Code (`index.html`)-->
 <!--```html-->
+<!--```html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +190,7 @@
       left: 0;
       width: 100%;
       z-index: 100;
-      padding: 16px 36px;
+      padding: 10px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -199,7 +200,7 @@
       border-bottom: 0.5px solid var(--line-subtle);
     }
     .site-header.scrolled {
-      padding: 12px 36px;
+      padding: 8px 32px;
       background: rgba(253, 251, 247, 0.98);
       box-shadow: 0 4px 25px rgba(45, 41, 38, 0.04);
     }
@@ -210,31 +211,62 @@
       flex-shrink: 0;
     }
     .header-brand-logo {
-      height: 48px;
-      width: auto;
-      max-width: 180px;
+      height: 36px;
+      width: 36px;
       object-fit: contain;
       display: block;
       mix-blend-mode: multiply;
       transition: transform 0.3s ease;
     }
     .header-brand-logo:hover { transform: scale(1.02); }
+    .header-brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-left: 9px;
+      white-space: nowrap;
+    }
+    .header-brand-name {
+      font-family: var(--font-display);
+      font-size: 0.77rem;
+      letter-spacing: 0.19em;
+      color: var(--taupe-text);
+    }
+    .header-brand-tagline {
+      font-size: 0.47rem;
+      letter-spacing: 0.16em;
+      color: var(--taupe-muted);
+      text-transform: uppercase;
+    }
+    .header-monogram {
+      display: grid;
+      place-items: center;
+      width: 27px;
+      height: 27px;
+      border: 1px solid var(--line-gold);
+      border-radius: 50%;
+      color: var(--taupe-muted);
+      font-family: var(--font-display);
+      font-size: 0.73rem;
+    }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 32px;
+      flex-shrink: 0;
+      gap: clamp(10px, 1vw, 16px);
       list-style: none;
     }
     .nav-link {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
+      font-size: 0.56rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--taupe-text);
       text-decoration: none;
       font-weight: 300;
       position: relative;
       padding: 6px 0;
+      white-space: nowrap;
       transition: color 0.3s ease;
     }
     .nav-link::after {
@@ -340,22 +372,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: clamp(120px, 15vh, 160px) 24px clamp(40px, 8vh, 70px) 24px;
+      padding: clamp(100px, 13vh, 130px) 24px clamp(36px, 7vh, 58px) 24px;
       overflow: hidden;
       background: radial-gradient(circle at 50% 45%, #FFFFFF 0%, #FDFBF7 65%, #F8F3EC 100%);
     }
     #petalCanvas { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
     .hero-floral-frame { position: absolute; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
-    .floral-cluster {
+    .floral-corner {
       position: absolute;
-      width: clamp(260px, 32vw, 440px);
-      height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
       opacity: 0.95;
+      height: auto;
+      object-fit: contain;
     }
-    .floral-cluster-left { top: 0; left: 0; background-position: left center; }
-    .floral-cluster-right { top: 0; right: 0; background-position: right center; transform: scaleX(-1); }
+    .floral-corner-top-left { top: 52px; left: 0; width: clamp(230px, 30vw, 434px); }
+    .floral-corner-top-right { top: 52px; right: 0; width: clamp(220px, 27.3vw, 395px); }
+    .floral-corner-bottom-left { bottom: 0; left: 0; width: min(43vw, 616px); }
+    .floral-corner-bottom-right { bottom: 0; right: 0; width: min(41.3vw, 599px); }
 
     .hero-content {
       position: relative;
@@ -367,12 +399,12 @@
     }
     .hero-headline {
       font-family: var(--font-serif);
-      font-size: clamp(2.3rem, 5.2vw, 4.8rem);
+      font-size: clamp(2.3rem, 4vw, 3.55rem);
       font-weight: 300;
       line-height: 1.08;
       letter-spacing: -0.01em;
       color: var(--taupe-text);
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
     .hero-headline em {
       font-family: var(--font-display);
@@ -381,17 +413,17 @@
     }
     .hero-subtext {
       font-family: var(--font-script);
-      font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+      font-size: clamp(1.7rem, 2.65vw, 2.35rem);
       color: var(--taupe-muted);
       letter-spacing: 0.04em;
-      margin-bottom: 22px;
+      margin-bottom: 14px;
       line-height: 1.2;
     }
     .hero-description {
-      max-width: 580px;
-      margin: 0 auto 30px auto;
-      font-size: clamp(0.82rem, 1.6vw, 0.92rem);
-      line-height: 1.8;
+      max-width: 470px;
+      margin: 0 auto 22px auto;
+      font-size: clamp(0.76rem, 1.05vw, 0.86rem);
+      line-height: 1.65;
       color: var(--taupe-muted);
     }
     .hero-cta-group {
@@ -400,42 +432,22 @@
       justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
 
-    .scroll-cue-wrap {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column;
+    .hero-eyebrow {
+      display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      margin-bottom: 17px;
+      padding: 5px 12px;
+      border: 1px solid var(--line-gold);
+      border-radius: 9999px;
       color: var(--taupe-muted);
-      text-decoration: none;
-      font-size: 0.62rem;
-      letter-spacing: 0.25em;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
     }
-    .scroll-cue-icon {
-      width: 18px;
-      height: 26px;
-      border: 0.5px solid var(--taupe-muted);
-      border-radius: 9px;
-      display: flex;
-      justify-content: center;
-      padding-top: 4px;
-    }
-    .scroll-cue-dot {
-      width: 2.5px;
-      height: 5px;
-      background: var(--pale-gold);
-      border-radius: 2px;
-      animation: rollDown 2s infinite ease-in-out;
-    }
-    @keyframes rollDown {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(9px); opacity: 0; }
-    }
-
     /* Garden Walk */
     .garden-path-section {
       position: relative;
@@ -850,6 +862,7 @@
     .hotspot-drawer-overlay {
       position: fixed;
       inset: 0;
+      overflow: hidden;
       background: rgba(45, 41, 38, 0.4);
       backdrop-filter: blur(8px);
       z-index: 1000;
@@ -1301,8 +1314,8 @@
 
     /* Mobile First Responsive Styles */
     @media (max-width: 1024px) {
-      .site-header { padding: 14px 24px; }
-      .site-header.scrolled { padding: 10px 24px; }
+      .site-header { padding: 10px 24px; }
+      .site-header.scrolled { padding: 8px 24px; }
       .nav-links { display: none; }
       .mobile-menu-toggle { display: flex; }
       .header-actions .btn-pill { display: none; }
@@ -1312,15 +1325,24 @@
       .builder-receipt-col { position: static; }
       .footer-bottom-grid { grid-template-columns: 1fr; }
       .winding-path-svg-bg { display: none; }
-      .floral-cluster { opacity: 0.35; width: 170px; }
+      .floral-corner-top-left, .floral-corner-top-right { width: 30vw; opacity: 0.78; }
+      .floral-corner-bottom-left, .floral-corner-bottom-right { width: 42vw; opacity: 0.9; }
     }
 
     @media (max-width: 768px) {
       .site-header { padding: 12px 18px; }
-      .header-brand-logo { height: 40px; max-width: 135px; }
+      .header-brand-logo { height: 34px; width: 34px; }
+      .header-brand-name { font-size: 0.68rem; }
+      .header-brand-tagline { font-size: 0.42rem; }
+      .header-monogram { display: none; }
+      .currency-select-wrap { display: none; }
       .hero-section { padding-top: 100px; }
-      .floral-cluster { display: none; }
+      .floral-corner-top-left, .floral-corner-top-right { top: 54px; width: 145px; opacity: 0.65; }
+      .floral-corner-bottom-left, .floral-corner-bottom-right { width: 210px; opacity: 0.8; }
       .hero-content { padding: 0 6px; }
+      .hero-eyebrow { font-size: 0.5rem; }
+      .hero-headline { font-size: clamp(2.15rem, 9vw, 3rem); }
+      .hero-subtext { font-size: clamp(1.6rem, 7vw, 2rem); }
       .hero-cta-group { flex-direction: column; width: 100%; gap: 12px; }
       .hero-cta-group .btn-pill { width: 100%; }
       .reservation-form-grid { grid-template-columns: 1fr; }
@@ -1365,18 +1387,17 @@
   <!-- Header -->
   <header class="site-header" id="siteHeader">
     <a href="#" class="header-logo-group">
-      <img 
-        src="Hea_Ho_logo.png" 
-        alt="Heavenly Hosts — Hosting &amp; Decor" 
-        class="header-brand-logo"
-      >
+      <img src="H_black_logo.png" alt="" class="header-brand-logo">
+      <span class="header-brand-copy">
+        <span class="header-brand-name">Heavenly Hosts</span>
+        <span class="header-brand-tagline">Bespoke Atelier · Est. 2023</span>
+      </span>
     </a>
 
     <ul class="nav-links">
       <li><a href="#bloomingGateway" class="nav-link">The Gateway</a></li>
       <li><a href="#gardenWalk" class="nav-link">The Garden Walk</a></li>
-      <li><a href="#picnicDestination" class="nav-link">The Setup</a></li>
-      <li><a href="#realGallerySection" class="nav-link">Gallery</a></li>
+      <li><a href="#picnicDestination" class="nav-link">The Picnic Setup</a></li>
       <li><a href="#packagesSection" class="nav-link">Packages</a></li>
       <li><a href="#reserveSection" class="nav-link">Reserve</a></li>
     </ul>
@@ -1392,6 +1413,7 @@
         <span class="currency-arrow">▾</span>
       </div>
 
+      <span class="header-monogram" aria-hidden="true">H</span>
       <a href="#reserveSection" class="btn-pill btn-pill-gold" style="padding: 9px 20px; font-size: 0.65rem;">
         <span>Reserve Date</span>
       </a>
@@ -1410,23 +1432,16 @@
   <section class="hero-section section-transition-mask" id="bloomingGateway">
     <canvas id="petalCanvas"></canvas>
 
-    <div class="hero-floral-frame">
-      <svg class="floral-cluster floral-cluster-left" viewBox="0 0 450 900" fill="none">
-        <circle cx="80" cy="180" r="75" fill="#F4CFD5"/>
-        <path d="M 80 120 C 50 140 40 180 65 210 C 90 240 130 230 145 190 C 160 150 120 110 80 120 Z" fill="#D9828E"/>
-        <circle cx="80" cy="175" r="35" fill="#BF5B6A"/>
-        <circle cx="160" cy="340" r="60" fill="#FAF7F2" stroke="#E6DDCF" stroke-width="1.5"/>
-        <circle cx="95" cy="580" r="85" fill="#F4CFD5"/>
-        <ellipse cx="60" cy="100" rx="14" ry="24" fill="#8F9887" transform="rotate(-30 60 100)"/>
-      </svg>
-      <svg class="floral-cluster floral-cluster-right" viewBox="0 0 450 900" fill="none">
-        <circle cx="80" cy="180" r="75" fill="#F4CFD5"/>
-        <circle cx="160" cy="340" r="60" fill="#FAF7F2" stroke="#E6DDCF" stroke-width="1.5"/>
-        <circle cx="95" cy="580" r="85" fill="#F4CFD5"/>
-      </svg>
+    <div class="hero-floral-frame" aria-hidden="true">
+      <img class="floral-corner floral-corner-top-left" src="Gg_i_ (2).png" alt="">
+      <img class="floral-corner floral-corner-top-right" src="Gg_i_ (3).png" alt="">
+      <img class="floral-corner floral-corner-bottom-left" src="Gg_i_ (1).png" alt="">
+      <img class="floral-corner floral-corner-bottom-right" src="Gg_i_ (4).png" alt="">
     </div>
 
     <div class="hero-content">
+      <p class="hero-eyebrow"><span aria-hidden="true">✦</span> Curated by Faith, Dimpho &amp; Bless</p>
+
       <h1 class="hero-headline">
         Where Elegance Meets<br>
         <em>Unforgettable Experiences</em>
@@ -1444,7 +1459,7 @@
 
       <div class="hero-cta-group">
         <a href="#picnicDestination" class="btn-pill" id="seeSetupBtn">
-          <span>See The Setup</span>
+          <span>See the Setup</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
@@ -1454,12 +1469,6 @@
         </a>
       </div>
 
-      <a href="#gardenWalk" class="scroll-cue-wrap">
-        <span>Scroll To Walk</span>
-        <div class="scroll-cue-icon">
-          <span class="scroll-cue-dot"></span>
-        </div>
-      </a>
     </div>
   </section>
 
@@ -2347,7 +2356,6 @@
       if (!canvas) return;
       canvas.width = window.innerWidth; canvas.height = window.innerHeight;
     }
-    window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
     class PetalParticle {
@@ -2386,6 +2394,7 @@
     if (canvas && ctx) {
       const count = window.innerWidth < 768 ? 18 : 36;
       for (let i = 0; i < count; i++) petals.push(new PetalParticle());
+      window.addEventListener('resize', resizeCanvas);
       function renderPetals() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let p of petals) { p.update(); p.draw(); }
